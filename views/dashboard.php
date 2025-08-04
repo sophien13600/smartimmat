@@ -2,10 +2,10 @@
 session_start();
 require_once "../partials/head.php";
 require_once "../partials/nav.php";
-//var_dump($_SESSION);    
-require_once "../repository/utilisateur_repository.php";
+var_dump($_SESSION);    
+require_once "../repository/login_repository.php";
 
-$user = check_mail_and_password(   $_SESSION['mail'] , $_SESSION['pwd'] );
+$user = check_mail_and_password(   $_SESSION['email'] , $_SESSION['password'] );
 ?>  
 <!DOCTYPE html>
 <html lang="en">

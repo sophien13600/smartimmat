@@ -1,7 +1,7 @@
 <?php
 include_once "../config/connexion.php";
 
-function check_mail_and_password($mail, $pwd)
+function check_mail_and_password($mail, $password)
 {
   
 try {
@@ -10,7 +10,7 @@ try {
         //echo "<br>$select<br>";
         $query = $pdo->prepare($select);
         $query->bindValue(":mail", $mail);
-        $query->bindValue(":pwd", $pwd);
+        $query->bindValue(":pwd", $password);
         $query->execute();
         $resultat = $query->fetch(PDO::FETCH_ASSOC);
         return $resultat;
