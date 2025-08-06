@@ -1,4 +1,4 @@
-<form   action="../controllers/login_controller.php" method="POST">
+<form action="../controllers/login_controller.php" method="post">   
     <h2>Connexion</h2>
     <input type="mail" name="mail" placeholder ="Votre email">
     <input type="password" name="password" placeholder="Saisissez votre mot de passe">

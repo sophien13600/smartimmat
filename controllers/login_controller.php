@@ -5,22 +5,41 @@ include "../classes/User.php";
 
 //$user = new user($_POST['']);
 // traiter les données de la page login.php
+var_dump($_SERVER['REQUEST_METHOD']);
+// echo str_contains($_SERVER['REQUEST_METHOD'] == 'POST');
+// die();
+if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/login.php") and ($_SERVER['REQUEST_METHOD'] == 'POST')) {
 
-if (str_contains($_SERVER['HTTP_REFERER'], "login.php") and $_SERVER['REQUEST_METHOD'] == 'POST')  {
-    $mail= $_POST['mail'];
-    $password = $_POST['password'];
-   
+    $mail = $_POST["mail"];
+    $password = $_POST["password"];
     
-    check_mail_and_password($mail,  $password );
-    header("location: ../views/dashboard.php");
+    $resultat = check_mail($mail);
+    var_dump( $resultat);
+     if ($resultat and password_verify($password, $resultat[4])){
+        
     die();
-}
-
-if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/dashboard.php")) {
-    session_start();
-    session_destroy();
-   
-header("location: ../views/login.php");
-}
-
     
+        // utilisteur authéntifié
+        $_SESSION['nom'] = $resultat[1];
+        $_SESSION['prenom'] = $resultat[2];
+        $_SESSION['email'] = $resultat[3];
+
+        header("location: ../views/dashboard.php");
+
+        //check_mail_and_password($mail,  $password );
+        //header("location: ../views/dashboard.php");
+        die();
+   // } else {
+        // Identifiants incorrects
+      //  header("location: ../../views/connexion.php");
+      //  die();
+  //  }//
+//}
+
+// if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/dashboard.php")) {
+//     session_start();
+//     session_destroy();
+   
+// header("location: ../views/login.php");
+}
+}

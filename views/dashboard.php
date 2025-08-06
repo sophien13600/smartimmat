@@ -3,9 +3,8 @@ session_start();
 require_once "../partials/head.php";
 require_once "../partials/nav.php";
 var_dump($_SESSION);    
-require_once "../repository/login_repository.php";
 
-$user = check_mail_and_password(   $_SESSION['email'] , $_SESSION['password'] );
+//$user = check_mail_and_password(   $_POST['email'] , $_POST['password'] );
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +14,7 @@ $user = check_mail_and_password(   $_SESSION['email'] , $_SESSION['password'] );
     <title>Dashboard</title>
 </head>
 <body>
-    <h2>Name <?= $_SESSION['']?></h2>
+    <h2>Name <?= $_SESSION['nom']?></h2>
 </body>
 </html>
 
