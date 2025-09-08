@@ -39,7 +39,8 @@ if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/lo
 }
 }
 if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/dashboard.php") and ($_SERVER['REQUEST_METHOD'] == 'POST')){
-  session_destroy();
+  // session_destroy();
+  logout();
   header("location: ../views/login.php");
   die();
 }

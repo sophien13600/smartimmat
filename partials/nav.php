@@ -22,5 +22,12 @@
                 <a class= "button" href ="/smartimmat/views/login.php" >
                     Se connecter
                 </a>
+               <?php if (isset($_SESSION['nom'])): ?>
+                    
+                <a class= "button" href ="/smartimmat/views/dashboard.php" >
+                    Se deconnecter
+                </a>
+                
+                <?php endif; ?>
             </div>
         </nav>

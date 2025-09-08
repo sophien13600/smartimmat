@@ -16,7 +16,7 @@ check_files($_FILES);
 // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 // $uploadOk = 1;
 // $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// // Check if image file is a actual image or fake image
+ // Check if image file is a actual image or fake image
 // if(isset($_POST["submit"])) {
 //   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 //   if($check !== false) {
@@ -27,3 +27,14 @@ check_files($_FILES);
 //     $uploadOk = 0;
 //   }
 // }
+
+/************************************************************************
+PHP script explained:
+
+$target_dir = "uploads/" - specifies the directory where the file is going to be placed
+$target_file specifies the path of the file to be uploaded
+$uploadOk=1 is not used yet (will be used later)
+$imageFileType holds the file extension of the file (in lower case)
+Next, check if the image file is an actual image or a fake image
+
+********************************************************************/

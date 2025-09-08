@@ -26,5 +26,5 @@ try {
     }
 }
 function logout(){
-    
+     session_destroy();
 }
