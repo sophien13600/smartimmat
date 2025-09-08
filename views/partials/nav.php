@@ -19,15 +19,20 @@
             <div class=  "nav-container">
                 <a href="">Compresser</a>
                 <a href="">Convertir</a>
-                <a class= "button" href ="/smartimmat/views/login.php" >
-                    Se connecter
-                </a>
-               <?php if (isset($_SESSION['nom'])): ?>
-                    
-                <a class= "button" href ="/smartimmat/views/dashboard.php" >
-                    Se deconnecter
-                </a>
-                
+                <?php if (isset($_SESSION['nom'])): ?>
+                    <a class="button" href="/smartimmat/views/dashboard.php">
+                        Mon Espace
+                    </a>
+                    <a class="button" href="/smartimmat/controllers/logout_controller.php">
+                        Se déconnecter
+                    </a>
+                <?php else: ?>
+                    <a class="button" href="/smartimmat/views/login.php">
+                        Se connecter
+                    </a>
+                    <a class="button" href="/smartimmat/views/register.php">
+                        S'inscrire
+                    </a>
                 <?php endif; ?>
             </div>
         </nav>

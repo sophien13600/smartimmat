@@ -1,4 +1,5 @@
 <?php
-require_once "../partials/head.php";
-require_once "../partials/nav.php";
-require_once "../partials/login_form.php";
+session_start();
+require_once "./partials/head.php";
+require_once "./partials/nav.php";
+require_once "./partials/login_form.php";
