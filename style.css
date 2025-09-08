@@ -30,7 +30,7 @@ nav{
 .nav-container a{
     text-decoration: none;
 }
-form{
+.login_form{
 
     box-shadow: 10px 5px 5px #edebeb;
     margin-top: 2em;
@@ -46,7 +46,7 @@ form{
 
 }
 input{
-        padding: 0.5em;
+    padding: 0.5em;
     border-radius: 7px;
 }
 .button-container{
@@ -54,10 +54,15 @@ input{
     justify-content: flex-end;
 }
 .button-form{
-        width: 11rem;
+    width: 11rem;
     padding: 1em;
     border-radius: 7px;
     background-color: #1414E7;
     border:none;
     color: white;
+}
+.logout{
+    display:flex;
+    justify-content: space-between;
+
 }

@@ -25,3 +25,6 @@ try {
         echo "\nErreur : problème de connexion avec la BD" . $ex->getMessage();
     }
 }
+function logout(){
+    
+}
