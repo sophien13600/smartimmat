@@ -14,7 +14,7 @@ if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/lo
     $password = $_POST["password"];
     
     $resultat = check_mail($mail);
-    var_dump( $resultat);
+    //var_dump( $resultat);
      if ($resultat and password_verify($password, $resultat[4])){
  
         // utilisteur authéntifié
