@@ -1,68 +1,87 @@
-body{
-    margin:0;
+body {
+  margin: 0;
 }
-nav{
-   
-       background-color: #61DFAC;
-    padding: 1.5rem;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  background-color: #61dfac;
+  font-size: 1.15em;
+  padding: 1.5rem;
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.button{
-    text-decoration: none;
-    background-color: #1414E7;
-    padding: 0.5em;
-    border-radius: 4px;
-    color: white;
-    width:7rem;
-    white-space: nowrap;
+nav > a {
+  margin-left: 2em;
+}
+.button {
+  text-decoration: none;
+  background-color: #1414e7;
+  padding: 0.5em;
+  border: solid 1px;
+  border-color: #1414e7;
+  border-radius: 4px;
+  color: white;
+  width: 7rem;
+  white-space: nowrap;
 }
 
-.nav-container{
-        width: 17vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 4em;
+.nav-container {
+  width: 17vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 7em;
 }
-.nav-container a{
-    text-decoration: none;
+.button-register {
+  text-decoration: none;
+  border: solid 1px;
+  border-color: #1414e7;
+  padding: 0.5em;
+  border-radius: 4px;
+  color: #1414e7;
+  width: 7rem;
+  white-space: nowrap;
 }
-.login_form{
-
-    box-shadow: 10px 5px 5px #edebeb;
-    margin-top: 2em;
-    border-radius: 7px;
-    padding: 5.5em;
-    width: 25vw;
-    margin: 2em auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-content: center;
-    border: solid 1px lightgrey;
-
+.button-register:hover {
+  background-color: #1414e7;
+  color: white;
 }
-input{
-    padding: 0.5em;
-    border-radius: 7px;
+.nav-container > a {
+  text-decoration: none;
+  margin-right: 1rem;
 }
-.button-container{
-    display:flex;
-    justify-content: flex-end;
+.login_form,
+.register_form,
+.account_form {
+  box-shadow: 10px 5px 5px #edebeb;
+  margin-top: 2em;
+  border-radius: 7px;
+  padding: 5.5em;
+  width: 25vw;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-content: center;
+  border: solid 1px lightgrey;
 }
-.button-form{
-    width: 11rem;
-    padding: 1em;
-    border-radius: 7px;
-    background-color: #1414E7;
-    border:none;
-    color: white;
+input {
+  padding: 0.5em;
+  border-radius: 7px;
 }
-.logout{
-    display:flex;
-    justify-content: space-between;
-
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.button-form {
+  width: 11rem;
+  padding: 1em;
+  border-radius: 7px;
+  background-color: #1414e7;
+  border: none;
+  color: white;
+}
+.logout {
+  display: flex;
+  justify-content: space-between;
 }

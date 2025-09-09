@@ -1,4 +1,4 @@
-<form action="../controllers/register_controller.php" method="post">
+<form class ="register_form"action="../controllers/register_controller.php" method="post">
     <h2>Infomation utilisateur</h2>
     <label for="name">Votre nom</label>
         <input name="name" id="name" type="text" placeholder="Nom">

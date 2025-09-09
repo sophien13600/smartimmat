@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "../repository/file_repository.php";
+include "../repositories/file_repository.php";
 
 //$file = "test.txt";
 // if(is_uploaded_file($file)) {

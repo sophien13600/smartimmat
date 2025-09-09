@@ -1,5 +1,5 @@
 <?php 
-include "../repository/register_repository.php";
+include "../repositories/register_repository.php";
 // $nom = $user->getName();
 // var_dump($nom);
 

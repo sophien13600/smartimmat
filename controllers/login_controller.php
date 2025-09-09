@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../repository/login_repository.php";
+include "../repositories/login_repository.php";
 include "../classes/User.php";
 
 //$user = new user($_POST['']);
@@ -18,6 +18,7 @@ if (str_contains($_SERVER['HTTP_REFERER'], "http://localhost/smartimmat/views/lo
      if ($resultat and password_verify($password, $resultat[4])){
  
         // utilisteur authéntifié
+        $_SESSION['idUser'] = $resultat[0];
         $_SESSION['nom'] = $resultat[1];
         $_SESSION['prenom'] = $resultat[2];
         $_SESSION['email'] = $resultat[3];
